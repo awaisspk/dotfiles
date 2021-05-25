@@ -1,0 +1,9 @@
+[user]
+	name = awais-pk
+	email = bsef19m509@pucit.edu.pk
+[color]
+	ui = auto
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
