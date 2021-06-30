@@ -1,0 +1,23 @@
+alias vi="nvim"
+alias zshconfig="nvim ~/.zshrc"
+alias ls="lsd --group-dirs=last"
+alias md="mkdir"
+alias l="ls -l"
+alias ll="ls -ll"
+alias la="ls -A"
+alias kconf="nvim /home/awais/.config/kitty/kitty.conf"
+alias ..="cd .."
+alias ...="cd ../.."
+alias icat="kitty +kitten icat"
+alias kfont="kitty + list-fonts --psnames"
+alias xmoconf="nvim ~/.xmonad/xmonad.hs"
+alias connect="nmcli device wifi connect ZONG\ MBB-E8372-54AD"
+alias ws="nmcli device status"
+alias fh="free -h"
+alias vim='nvim'
+alias lv="live-server"
+alias yt='youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3'
+alias ytv='youtube-dl --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]/best" --embed-thumbnail --add-metadata'
+alias neo='neofetch'
+
+alias feh="feh --bg-fill"
