@@ -1,3 +1,4 @@
+alias zshalias="nvim ~/.zsh_aliases"
 alias vi="nvim"
 alias zshconfig="nvim ~/.zshrc"
 alias ls="lsd --group-dirs=last"
@@ -21,3 +22,17 @@ alias ytv='youtube-dl --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]
 alias neo='neofetch'
 
 alias feh="feh --bg-fill"
+alias kdiff="kitty +kitten diff"
+alias tn="ts-node"
+alias yca="yarn create react-app"
+
+alias load="kill -USR1 $(pidof st)"
+alias  use="xrdb merge"
+
+# Git aliases
+
+# alias gcl="git config --list"
+# alias ga="git add"
+# alias gcm ="git commit -m"
+# alias gc ="git commit"
+# alias gcb="git checkout"

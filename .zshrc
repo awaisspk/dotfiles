@@ -24,16 +24,12 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 #####################
 # PLUGINS           #
 #####################
-# SSH-AGENT
-#zinit light bobsoppe/zsh-ssh-agent
+
 # AUTOSUGGESTIONS, TRIGGER PRECMD HOOK UPON LOAD
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 zinit ice wait"0a" lucid atload"_zsh_autosuggest_start"
 zinit light zsh-users/zsh-autosuggestions
-# # ENHANCD
-# zinit ice wait"0b" lucid
-# zinit light b4b4r07/enhancd
-# export ENHANCD_FILTER=fzf:fzy:peco
+
 # HISTORY SUBSTRING SEARCHING
 zinit ice wait"0b" lucid atload'bindkey "$terminfo[kcuu1]" history-substring-search-up; bindkey "$terminfo[kcud1]" history-substring-search-down'
 zinit light zsh-users/zsh-history-substring-search
@@ -101,17 +97,15 @@ zinit ice lucid wait"0" as"program" from"gh-r" bpick='*linux_amd64.deb' pick"usr
 zinit light charmbracelet/glow
 eval "$(zoxide init --cmd j zsh)"
 
-# ZSH DIFF SO FANCY
-# zinit ice wait"2" lucid as"program" pick"bin/git-dsf"
-# zinit light zdharma/zsh-diff-so-fancy
-# GIT-FLOW
-# zinit light petervanderdoes/git-flow-completion
-# RCLONE
-# zinit ice lucid wait"0" as"program" from"gh-r" bpick='*-linux-amd64.deb' pick"usr/bin/rclone"
-# zinit light 'rclone/rclone'
+zinit light "mdumitru/git-aliases" 
+zinit light "djui/alias-tips"
+# shows alias tip
 #####################
 # HISTORY           #
 #####################
+autoload -U compinit
+compinit -i
+
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zhistory"
 HISTSIZE=290000
 SAVEHIST=$HISTSIZE
@@ -142,7 +136,7 @@ setopt vi
 bindkey "^P" up-line-or-search
 bindkey "^N" down-line-or-search
 bindkey '^F' autosuggest-accept
-# chpwd() exa --git --icons --classify --group-directories-first --time-style=long-iso --group --color-scale
+
 #####################
 # ENV VARIABLE      #
 #####################
@@ -150,7 +144,6 @@ export EDITOR='nvim'
 export VISUAL=$EDITOR
 export PAGER='less'
 export SHELL='/bin/zsh'
-# export BAT_THEME="gruvbox-dark"
 #####################
 # COLORING          #
 #####################
@@ -189,16 +182,17 @@ bindkey '^Z' fancy-ctrl-z
 #####################
 # FZF SETTINGS      #
 #####################
+
+# --preview-window=right:50%
+# --preview-window=sharp
+# --preview-window=cycle
+# --preview '([[ -f {} ]] && (bat --style=numbers --color=always --theme=gruvbox --line-range :500 {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 export FZF_DEFAULT_OPTS="
 --ansi
 --layout=default
 --info=inline
 --height=50%
 --multi
---preview-window=right:50%
---preview-window=sharp
---preview-window=cycle
---preview '([[ -f {} ]] && (bat --style=numbers --color=always --theme=gruvbox --line-range :500 {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --prompt='λ -> '
 --pointer='|>'
 --marker='✓'

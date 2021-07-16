@@ -68,7 +68,7 @@ font-3 = unifont:fontformat=truetype:size=13:antialias=true;
 
 [module/life]
 type = custom/text
-content = 10-days
+content = 25-days
 
 [module/round-left]
 type = custom/text
