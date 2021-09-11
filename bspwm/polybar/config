@@ -59,16 +59,12 @@ wm-restack = bspwm
 
 modules-left = round-left bspwm round-right 
 modules-center =    
-modules-right =  life   temperature   alsa battery round-left cpu round-right  wlan mem xbacklight round-left time round-right  powermenu
+modules-right =   alsa battery round-left cpu round-right  wlan mem xbacklight round-left time round-right  powermenu
 
-font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=13;3
-font-1 = JetBrainsMono Nerd Font:size=18;5
+font-0 = Victor Mono Nerd Font:style=Bold:pixelsize=13;3
+font-1 = Victor Mono Nerd Font:size=18;5
 font-2 = Material Design Icons:style=Bold:size=13;3
 font-3 = unifont:fontformat=truetype:size=13:antialias=true;
-
-[module/life]
-type = custom/text
-content = 25-days
 
 [module/round-left]
 type = custom/text

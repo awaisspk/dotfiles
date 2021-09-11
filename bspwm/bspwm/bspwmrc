@@ -15,7 +15,7 @@ cp -r ~/Public/poly/bsp/polybar ~/.config/ &
 ~/.config/polybar/launch.sh &
 
 #wallpaper and nvim
-feh --bg-fill ~/Pictures/wall/sniper.jpg &
+feh --bg-fill ~/Pictures/Wallpapers/doge.png &
 del .config/nvim && cp -r ~/Public/nvim_confs/base/nvim ~/.config/ &
 
 # workspaces 
